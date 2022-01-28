@@ -1,10 +1,13 @@
-from flask import Flask
+from flask import Flask, jsonify
+import choose
 
 app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def respond():
-    return {"ola": "Mundo"}
-
+    quote = choose.returnQuote()
+    dict = {}
+    dict['quote'] = quote
+    return jsonify(dict)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
