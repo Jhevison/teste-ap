@@ -16,10 +16,10 @@ def returnQuote():
  
     
     quote = random.choice(quote).replace("\n", " ").replace("\t", " ").replace("~", " ")
-    """
-    dict = {
-     "quote": quote
-     }   
-    """
+
+
+
+
+
     return quote
 returnQuote()
